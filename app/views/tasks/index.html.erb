@@ -1,0 +1,9 @@
+<h1>My Tasks</h1>
+<ul class="task-list">
+  <% @tasks.each do |task| %>
+    <%tick_class = task.completed ? "tick" : "box" %>
+    <li class="<%= tick_class %>"> <%= link_to task.title, task_path(task.id) %> <%= link_to "Delete", task_path(task), method: :delete, data: {confirm: "Are you sure?"} %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Create New", tasks_new_path %>

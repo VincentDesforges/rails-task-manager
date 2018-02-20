@@ -1,0 +1,23 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  font-family: sans-serif;
+}
+
+.task-list{
+  list-style-type: none;
+}
+
+.task-list li.tick:before{
+  content: "\2611";
+}
+
+.task-list li.box:before{
+  content: "\2610";
+}
+
+.task-description{
+  background-color: yellow;
+}
